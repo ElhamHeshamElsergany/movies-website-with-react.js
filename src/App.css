@@ -4,6 +4,13 @@ body{
 .navy{
   color: antiquewhite !important;
 }
+.na{
+  padding: 6px 15px !important;
+  border-radius: 20px;
+}
+.na:hover{
+  background-color: #dc3241 !important;
+}
 .vote{
   background-color: #dc3241;
   padding: 5px;
@@ -18,7 +25,30 @@ body{
   .moviees{
     display: flex !important;
     flex-wrap: wrap !important;
-  }
+    }
+
+  img{
+    border-radius: 50px;
+
+ }
   a{
     text-decoration: none !important;
   }
+  .searchMo{
+    background-color: #000000f2 !important ;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+.btn{
+  height: 5vh;
+}
+.iconn:hover{
+color: rgb(134, 5, 5) !important;
+}
+.not-found{
+  width: 100%;
+  height: 80vh;
+}

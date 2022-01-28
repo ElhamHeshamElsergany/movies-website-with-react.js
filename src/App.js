@@ -9,6 +9,7 @@ import Fav from './component/fav';
 import Movies from './component/movies';
 import Series from "./component/series";
 import MovieDetails from "./component/movieDetails";
+import NotFound from "./component/notfound";
 
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
         <Route path={"/Fav"} exact component={Fav} />
         <Route path={"/Registe"} exact component={Registe} />
         <Route path={"/details/:id"} exact component={MovieDetails} />
-
         <Route path={"/Login"} exact component={Login} />
+        <Route path={'*'} exact component={NotFound} />
+
       </Switch>
     </div>
   </BrowserRouter>

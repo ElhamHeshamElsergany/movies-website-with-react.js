@@ -3,12 +3,14 @@ import { Navbar, Nav, Container, Form, FormControl, Button } from "react-bootstr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 function NavbarSection() {
     return (
         <div className="navy">
-            <Navbar bg="dark" expand="lg">
+            <Navbar className="shadow-lg" expand="lg">
                 <Container fluid>
                     <div className="d-flex">
                         <FontAwesomeIcon icon={faVideo} spin className="my-2 mx-2" />
@@ -17,29 +19,23 @@ function NavbarSection() {
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-5 my-lg-0 navy"
+                            className="me-auto my-5 my-lg-0 navy d-flex justify-content-around w-100"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link className="navy h5 mx-3" to="/"> Movies</Link>
-                            <Link className="navy h5 mx-3" to="/Series"> Series</Link>
-
-                            <Link className="navy h5 mx-3 " to="/Fav" >Favoriets</Link>
-                            <Link className="navy h5 mx-3" to="/Login">Login</Link>
-                            <Link className="navy h5 mx-3" to="/Register">Register</Link>
-
-
-
+                            <div>
+                                <Link className="navy na h5 mx-3" to="/"> Movies</Link>
+                                <Link className="navy na h5 mx-3" to="/Series"> Series</Link>
+                                <Link className="navy  h5 mx-3 " to="/Fav" >
+                                    <IconButton className='text-white' aria-label="add to favorites">
+                                        <FavoriteIcon className="text-danger" />
+                                    </IconButton></Link>
+                            </div>
+                            <div>
+                                <Link className="navy na h5 mx-3" to="/Login">Login</Link>
+                                <Link className="navy na h5 mx-3" to="/Register">Register</Link>
+                            </div>
                         </Nav>
-                        <Form className="d-flex navy">
-                            <FormControl
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-danger">Search</Button>
-                        </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
